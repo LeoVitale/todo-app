@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/loader.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "production" : "pm2 start src/loader.js --name udemy-todo-app"
+  },
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.11.0",
+    "pm2": "^2.4.0"
+  }
+}
