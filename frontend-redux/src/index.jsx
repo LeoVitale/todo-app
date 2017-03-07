@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './main/app';
 import {AppContainer} from 'react-hot-loader';
+
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import reducers from './main/reducers';
+
 import './sass/index.scss';
 
 const render = (Component) => {
   ReactDOM.render(
   <AppContainer>
-    <Component/>
+    <Provider store={createStore(reducers)}>
+      <Component/>
+    </Provider>
   </AppContainer>, 
   document.getElementById('root'));
 };
