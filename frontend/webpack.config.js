@@ -21,7 +21,10 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      modules: __dirname + '/node_modules'
+    }
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -45,6 +48,12 @@ module.exports = {
       }, {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      }, {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }, {
+        test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
+        loader: 'file-loader'
       }
     ]
   },
