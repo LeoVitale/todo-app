@@ -70,8 +70,7 @@ class Todo extends Component {
           handleChange={this.handleChange}
           handleSearch={this.handleSearch}
           handleClear={this.handleClear}/>
-        <TodoList
-          handleRemove={this.handleRemove}/>
+        <TodoList />
       </div>
     );
   }
