@@ -1,6 +1,8 @@
 import React from 'react';
 import IconButton from '../template/iconButton';
 import '../sass/todoList.scss';
+import style from '../sass/todoList.scss';
+console.log(style);
 
 const TodoList = (props) => {
 
