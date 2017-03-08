@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './main/app';
 import {AppContainer} from 'react-hot-loader';
 
-import {createStore} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import {Provider} from 'react-redux';
+import promise from 'redux-promise';
+
 import reducers from './main/reducers';
 
 import './sass/index.scss';
@@ -12,7 +14,7 @@ import './sass/index.scss';
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
                 && window.__REDUX_DEVTOOLS_EXTENSION__();
 
-const store = createStore(reducers,devTools);
+const store = applyMiddleware(promise)(createStore)(reducers,devTools);
 
 const render = (Component) => {
   ReactDOM.render(
