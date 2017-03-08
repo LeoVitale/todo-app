@@ -9,10 +9,15 @@ import reducers from './main/reducers';
 
 import './sass/index.scss';
 
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
+                && window.__REDUX_DEVTOOLS_EXTENSION__();
+
+const store = createStore(reducers,devTools);
+
 const render = (Component) => {
   ReactDOM.render(
   <AppContainer>
-    <Provider store={createStore(reducers)}>
+    <Provider store={store}>
       <Component/>
     </Provider>
   </AppContainer>, 
