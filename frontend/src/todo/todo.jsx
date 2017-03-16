@@ -16,6 +16,7 @@ class Todo extends Component {
       list: []
     }
   }
+  
   componentDidMount(){
     this.refresh();
   }

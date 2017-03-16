@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const port = 3025
+const port = 3026
 module.exports = {
   entry: [
     'react-hot-loader/patch',
